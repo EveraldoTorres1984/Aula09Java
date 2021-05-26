@@ -15,9 +15,10 @@ import javax.swing.JOptionPane;
  */
 public class Principal extends javax.swing.JFrame {
     
-    Veiculo vei;
-    Cliente cli;
-
+    
+    
+    Veiculo vei = new Veiculo();
+    Cliente cli = new Cliente();
     /**
      * Creates new form Principal
      */
@@ -154,14 +155,14 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBCadVeiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadVeiculoActionPerformed
-        vei = new Veiculo();
+        
         CadVeiculo cv = new CadVeiculo(vei);
         cv.setVisible(true);
         
     }//GEN-LAST:event_jBCadVeiculoActionPerformed
 
     private void jBCadClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadClienteActionPerformed
-        cli = new Cliente();
+        
         CadCliente cc = new CadCliente(cli);
         cc.setVisible(true);
     }//GEN-LAST:event_jBCadClienteActionPerformed

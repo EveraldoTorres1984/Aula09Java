@@ -162,12 +162,17 @@ public class CadVeiculo extends javax.swing.JFrame {
     }//GEN-LAST:event_jTFabActionPerformed
 
     private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
-        
-        vei.setFabricante(jTFab.getText());
+        try {
+             vei.setFabricante(jTFab.getText());
         vei.setModelo(jTModelo.getText());
         vei.setPreco(Double.parseDouble(jTPreco.getText()));
-
         JOptionPane.showMessageDialog(this, "Cadastro do veículo Realizado!");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Preencha corretamente os  campos!");
+        }
+       
+
+        
 
 
     }//GEN-LAST:event_jBCadastrarActionPerformed
